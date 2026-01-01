@@ -4,3 +4,6 @@ core/__pycache__/
 customers/__pycache__/
 vehicles/__pycache__/
 vehicles/migrations/
+parking/__pycache__/
+parking/migrations/
+db.sqlite3
