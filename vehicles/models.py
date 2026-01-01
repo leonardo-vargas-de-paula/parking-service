@@ -6,13 +6,16 @@ class VehicleType(models.Model):
     name = models.CharField(
         max_length=50, verbose_name='Tipo de Veículo',
         unique=True,
-        verbose_name='Nome'
     )
     description = models.TextField(
         blank=True,
         null=True,
         verbose_name='Descrição'    
     )
+    
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name='Criado em')      
+    updated_at = models.DateTimeField(auto_now=True, verbose_name='Atualizado em')    
+    
     
     def __str__(self):  
         return self.name
