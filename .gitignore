@@ -6,5 +6,7 @@ vehicles/__pycache__/
 vehicles/migrations/
 parking/__pycache__/
 parking/migrations/
+authentication/__pycache__/
+authentication/migrations/
 db.sqlite3
 .env

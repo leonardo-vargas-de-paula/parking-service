@@ -2,3 +2,4 @@ Django
 python-dotenv
 django-jazzmin
 djangorestframework
+djangorestframework-simplejwt
