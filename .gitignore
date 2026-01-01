@@ -1,1 +1,4 @@
 /venv
+customers/migrations/
+core/__pycache__/
+customers/__pycache__/
