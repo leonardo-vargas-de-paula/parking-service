@@ -2,3 +2,5 @@
 customers/migrations/
 core/__pycache__/
 customers/__pycache__/
+vehicles/__pycache__/
+vehicles/migrations/
