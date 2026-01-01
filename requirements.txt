@@ -3,3 +3,4 @@ python-dotenv
 django-jazzmin
 djangorestframework
 djangorestframework-simplejwt
+flake8
