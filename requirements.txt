@@ -4,3 +4,4 @@ django-jazzmin
 djangorestframework
 djangorestframework-simplejwt
 flake8
+django-rql
