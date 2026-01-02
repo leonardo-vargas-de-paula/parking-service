@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     
     'rest_framework',
     'rest_framework_simplejwt',
+    'drf_spectacular',
     
     'customers',
     'vehicles',
@@ -284,7 +285,9 @@ REST_FRAMEWORK = {
     
     'DEFAULT_FILTER_BACKENDS': [
         'dj_rql.drf.RQLFilterBackend'
-    ]
+    ],
+    
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 
 SIMPLE_JWT = {
@@ -293,5 +296,13 @@ SIMPLE_JWT = {
     
     
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Parking Service Demo API',
+    'DESCRIPTION': 'API para gerenciamento de estacionamento',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    # OTHER SETTINGS
 }
     

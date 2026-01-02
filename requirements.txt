@@ -5,3 +5,4 @@ djangorestframework
 djangorestframework-simplejwt
 flake8
 django-rql
+drf-spectacular
