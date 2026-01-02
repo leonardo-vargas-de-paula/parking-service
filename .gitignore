@@ -10,3 +10,4 @@ authentication/__pycache__/
 authentication/migrations/
 db.sqlite3
 .env
+pass.sh

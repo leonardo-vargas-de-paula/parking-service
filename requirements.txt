@@ -6,3 +6,4 @@ djangorestframework-simplejwt
 flake8
 django-rql
 drf-spectacular
+psycopg2-binary
