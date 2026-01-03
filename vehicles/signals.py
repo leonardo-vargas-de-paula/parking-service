@@ -8,4 +8,4 @@ from .tasks import complete_vehicle_registration
 def complete_vehicle_registration_post_save(sender, instance, created, **kwargs):
     if created and not instance.brand or not instance.model or not instance.color:
         complete_vehicle_registration.delay(instance.license_plate)
-    pass
+    
