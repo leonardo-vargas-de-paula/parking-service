@@ -11,3 +11,4 @@ authentication/migrations/
 db.sqlite3
 .env
 pass.sh
+entrypoint.sh
