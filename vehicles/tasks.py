@@ -22,9 +22,9 @@ def complete_vehicle_registration(license_plate):
         
         if row:
             cells = row.query_selector_all('td')
-            brand = cells[1].inner_text().split()
-            model = cells[2].inner_text().split()
-            color = cells[3].inner_text().split()
+            brand = cells[1].inner_text().strip()
+            model = cells[2].inner_text().strip()
+            color = cells[3].inner_text().strip()
         
         browser.close()
     
@@ -32,8 +32,8 @@ def complete_vehicle_registration(license_plate):
         Vehicle.objects.filter(
             license_plate=license_plate,
         ).update(
-            brand=brand[0],
-            model=model[0],
-            color=color[0]
+            brand=brand,
+            model=model,
+            color=color,
         )
         
