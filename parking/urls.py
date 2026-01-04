@@ -1,11 +1,10 @@
 from django.urls import path, include
-from rest_framework.routers import DefaultRouter
+from parking.views import ParkingRecordDetailUpdateDelete, ParkingRecordListCreate, ParkingSpotDetailUpdateDelete, ParkingSpotListCreate
 
-from parking.views import ParkingSpotViewSet, ParkingRecordViewSet
 
-router = DefaultRouter()
-router.register('parking/spots', ParkingSpotViewSet)
-router.register('parking/records', ParkingRecordViewSet)
 urlpatterns = [
-    path('', include(router.urls))
+    path('parking/spots/', ParkingSpotListCreate.as_view(), name='parking-spot-list-create'),
+    path('parking/spots/<str:spot_number>/', ParkingSpotDetailUpdateDelete.as_view(), name='parking-spot-detail'),
+    path('parking/records/', ParkingRecordListCreate.as_view(), name='parking-record-list-create'),
+    path('parking/records/<int:pk>/', ParkingRecordDetailUpdateDelete.as_view(), name='parking-record-detail'),
 ]
